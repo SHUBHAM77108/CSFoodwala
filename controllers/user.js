@@ -57,4 +57,3 @@ export const getAdminStats = asyncError(async (req, res, next) => {
     totalIncome,
   });
 });
-
