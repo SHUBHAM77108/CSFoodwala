@@ -11,8 +11,6 @@ export const connectPassport = () => {
         callbackURL: process.env.GOOGLE_CALLBACK_URL,
       },
       async function (accessToken, refreshToken, profile, done) {
-        // Database comes here
-
         const user = await User.findOne({
           googleId: profile.id,
         });

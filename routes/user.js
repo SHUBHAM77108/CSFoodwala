@@ -24,13 +24,6 @@ router.get(
   })
 );
 
-    // router.get(
-    // "/login", 
-    // passport.authenticate("google"),
-    // (req, res, next)=>{
-    //   res.send("Logged In");
-    // });
-
 router.get("/me", isAuthenticated, myProfile);
 
 router.get("/logout", logout);
@@ -41,3 +34,10 @@ router.get("/admin/users", isAuthenticated, authorizeAdmin, getAdminUsers);
 router.get("/admin/stats", isAuthenticated, authorizeAdmin, getAdminStats);
 
 export default router;
+
+    // router.get(
+    // "/login", 
+    // passport.authenticate("google"),
+    // (req, res, next)=>{
+    //   res.send("Logged In");
+    // });
